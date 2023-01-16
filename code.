@@ -1,0 +1,13 @@
+function fetchGoldPrice() {
+    return fetch('https://www.goldprice.org/api/gold')
+        .then(response => response.json())
+        .then(data => data.price);
+}
+
+
+This function uses the fetch API to make a GET request to the specified URL and returns a promise that resolves to the current gold price in US dollars. The .json() method is used to parse the response as a JSON object, and the data.price property is used to access the current gold price.
+
+You can use the function like this:
+
+
+fetchGoldPrice().then(price => console.log(price));
